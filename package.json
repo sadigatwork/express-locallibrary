@@ -2,17 +2,22 @@
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.14.0"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "serverstart": "SET DEBUG=express-locallibrary-tutorial:* & npm run devstart"
   },
   "dependencies": {
+    "compression": "^1.8.0",
     "cookie-parser": "^1.4.6",
     "debug": "^4.3.5",
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
     "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
     "http-errors": "~2.0.0",
     "luxon": "^3.5.0",
     "mongoose": "^8.12.1",
@@ -21,3 +26,17 @@
     "pug": "3.0.3"
   }
 }
+
+
+# Create branch vanilla_deployment from the current branch (main)
+git checkout -b vanilla_deployment
+
+# Push the new branch to GitHub
+git push origin vanilla_deployment
+
+# Switch back to main
+git checkout main
+
+# Make any further changes in a new branch
+git pull upstream main # Merge the latest changes from GitHub
+git checkout -b my_changes # Create a new branch
